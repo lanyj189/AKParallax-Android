@@ -25,7 +25,7 @@ public class ParallaxListViewActivity extends Activity {
 
         parallax = (ParallaxListView) findViewById(R.id.listView);
 
-        parallax.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, dummys));
+        
 
         image = new ImageView(this);
         image.setImageResource(R.drawable.teste);
@@ -34,6 +34,8 @@ public class ParallaxListViewActivity extends Activity {
 
         parallax.addHeaderView(image);
         parallax.setImageViewToParallax(image);
+        
+        parallax.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, dummys));
 
     }
 
